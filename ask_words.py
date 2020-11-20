@@ -17,12 +17,8 @@ top.geometry("200x100")
 def helloCallBack():
     msg = messagebox.showinfo("Answer", "The capital of ..")
 
-
-tl = Label(top, text="Type of the name country:").grid(row=0, column=1)
-tb = Entry(top)
-B = Button(top, text="OK", command=helloCallBack)
-C = Button(top, text="Cancel", command=exit)
-tb.grid(row=2, column=1)
-B.place(x=50, y=50)
-C.place(x=100, y=50)
+tl = Label(top, text="Type of the name country:").grid(row=0, column=0)
+tb = Entry(top).grid(row=2, column=0)
+B = Button(top, text="OK", command=helloCallBack).place(x=50, y=50)
+C = Button(top, text="Cancel", command=exit).place(x=100, y=50)
 top.mainloop()
